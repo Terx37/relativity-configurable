@@ -1,3 +1,38 @@
+# Desc
+## - This is a modification of the "relativity" VSCode extension
+
+## It adds the following features:
+### You can set when the extension tells VSCode to use relative lines
+```
+//settings.json
+"relativity.relativeLineBehaviour": 'alwaysOn' // or 'onWhenInUse', 'alwaysOff'
+```
+### You can set a keybinding to peek relative lines
+```
+//keybindings.json
+{
+    "key": "ctrl+alt+g",
+    "command": "relativity.peekRelativeLines",
+    "when": "editorFocus && relativity.canPeek"
+},
+```
+### You can change the default jump direction using "settings.json"
+```
+//settings.json
+"relativity.defaultJumpDirection": 'down' // or 'up'
+```
+### You can specify additional characters (other then "-") in "settings.json" for reversing the search direction - these characters can be present anywhere in the text
+```
+//settings.json
+"relativity.jumpDirectionReverseStrings": "d r" // space separated strings
+// in the above case, typing "10d","d10","10r" or "r10" will reverse the jump direction
+```
+- you can use more then one character if you want (```"relativity.jumpDirectionReverseStrings": "reverse"```)
+
+   
+# *The following is the original relativity description provided for convenience (https://github.com/Jaimeloeuf/relativity)*
+
+
 # relativity
 Visual Studio Code extension "relativity" allows you to jump to lines relative to the current line and select them if you wish.  
 Should be used together with relative line numbers setting in VS code.

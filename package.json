@@ -1,17 +1,17 @@
 {
-  "name": "relativity",
-  "displayName": "relativity",
-  "description": "Shortcut commands to Goto/Select and more using Relative lines",
-  "version": "0.6.1",
+  "name": "relativity-configurable",
+  "displayName": "relativity - configurable",
+  "description": "Extended tweakable version of \"relativity\" - a Visual Studio Code extension to jump/GOTO around using relative line numbers!",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Enkel-Digital/relativity.git"
+    "url": ""
   },
-  "author": "JJ",
-  "publisher": "EnkelDigital",
+  "author": "",
+  "publisher": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Enkel-Digital/relativity/issues"
+    "url": ""
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -38,12 +38,14 @@
     "relative",
     "goto",
     "lines",
-    "jump"
+    "jump",
+    "configurable"
   ],
   "activationEvents": [
     "*",
     "onCommand:relativity.goto",
-    "onCommand:relativity.select"
+    "onCommand:relativity.select",
+    "onCommand:relativity.peekRelative"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -55,6 +57,10 @@
       {
         "command": "relativity.select",
         "title": "Select using relative line Goto/Jump"
+      },
+      {
+        "command": "relativity.peekRelativeLines",
+        "title": "Peek relative lines "
       }
     ],
     "keybindings": [
